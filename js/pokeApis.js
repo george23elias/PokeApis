@@ -1,9 +1,20 @@
-const Enviar = () => {
-  return "anfn Eviar";
+const PokeNombre = async () => {
+  const Response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10");
+  const data = await Response.json();
+  return data.results;
 };
+async function PokeImg() {
+  const Response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10");
+  const data = await Response.json();
+  return data.results;
+}
 
-function Enviando() {
+function PokeDescripcion() {
   return "Enviando Funcion";
 }
 
-export { Enviar, Enviando };
+function PokeColor() {
+  return "Enviando Funcion";
+}
+
+export { PokeNombre, PokeImg };

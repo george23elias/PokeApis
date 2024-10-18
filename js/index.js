@@ -1,9 +1,33 @@
-import { Enviar, Enviando } from "./pokeApis.js";
+const contenedor = document.getElementById("container");
 
-const apis2 = Enviando();
-const apis1 = Enviar();
+fetch("https://pokeapi.co/api/v2/pokemon")
+  .then((Response) => Response.json())
+  .then((data) => {
+    data.results.forEach((element) => {
+      console.log(element.name);
+      InsertarValores(element.name);
+    });
+  });
 
-console.log(apis2);
-console.log(apis1);
+function CardNombre(Nomnbre) {
+  const InsertNombre = document.createElement("h1");
+  InsertNombre.textContent = Nomnbre;
+  contenedor.appendChild(InsertNombre);
+}
+function CardImg(Nomnbre) {
+  const InsertNombre = document.createElement("h1");
+  InsertNombre.textContent = Nomnbre;
+  contenedor.appendChild(InsertNombre);
+}
 
+function CardDescripcion(Nomnbre) {
+  const InsertNombre = document.createElement("h1");
+  InsertNombre.textContent = Nomnbre;
+  contenedor.appendChild(InsertNombre);
+}
 
+function CardColores(Nomnbre) {
+  const InsertNombre = document.createElement("h1");
+  InsertNombre.textContent = Nomnbre;
+  contenedor.appendChild(InsertNombre);
+}
