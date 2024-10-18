@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ContenedorCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  text-transform: capitalize;
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+  gap: 1rem;
+  padding: 3px;
+}
